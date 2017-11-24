@@ -9,7 +9,8 @@ class CommandLineInteface
   def run
     make_students
     add_attributes_to_students
-    display_students
+    puts Student.all
+    #display_students
   end
 
   def make_students
