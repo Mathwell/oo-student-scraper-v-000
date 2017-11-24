@@ -61,6 +61,9 @@ class Scraper
         :bio =>student.css(".bio-content p").text,
       }
       individual.delete(:twitter) if individual[:twitter]==""
+      individual.delete(:linkedin) if individual[:linkedin]==""
+      individual.delete(:github) if individual[:github]==""
+      individual.delete(:blog) if individual[:blog]==""
       individual
     end
   end
