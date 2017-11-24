@@ -64,5 +64,3 @@ class Scraper
       individual
     end
   end
-
-
