@@ -33,7 +33,7 @@ class Student
      @profile_url=student_hash[:profile_url]
   end
 
-  def all
+  def self.all
     @@all
   end
 end
