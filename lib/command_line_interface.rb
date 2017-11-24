@@ -23,6 +23,7 @@ class CommandLineInteface
       attributes = Scraper.scrape_profile_page(BASE_PATH + student.profile_url)
       puts "URL"
       puts BASE_PATH + student.profile_url
+      puts attributes
       student.add_student_attributes(attributes)
     end
   end
