@@ -9,24 +9,17 @@ class Scraper
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 #method is responsible for scraping the index page that lists all of the students
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-<<<<<<< HEAD
+
   def self.scrape_index_page(index_url='fixtures/student-site/index.html')
     html=File.read(index_url)
-=======
-  def self.scrape_index_page(index_url)
-    html=File.read('fixtures/student-site/index.html')
->>>>>>> ca15a858be5043625bb30d4428947ea5ff9e4631
+
     students=Nokogiri::HTML(html)
     students.css(".student-card").each do |student_css|
       #student=student_css().text
       @students<<{
         :name => student_css.css(".student-name").text,
         :location =>student_css.css(".student-location").text,
-<<<<<<< HEAD
         :profile_url => student_css.css("a")[0]["href"]
-=======
-        :profile_url => student_css.link.attribute.value
->>>>>>> ca15a858be5043625bb30d4428947ea5ff9e4631
       }
     end
 
@@ -71,9 +64,5 @@ class Scraper
       individual
     end
   end
-=======
 
-  end
 
-end
->>>>>>> ca15a858be5043625bb30d4428947ea5ff9e4631
