@@ -8,7 +8,7 @@ class Student
     self.add_student_attributes(student_hash)
     #@name=student_hash[:name]
     #@location=student_hash[:location]
-    class.all<<self
+    self.class.all<<self
 
   end
 
