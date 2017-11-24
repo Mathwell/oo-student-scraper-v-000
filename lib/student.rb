@@ -12,6 +12,7 @@ class Student
     #@location=student_hash[:location]
     @@all<<self
     puts @@all.last.name
+    self
 
   end
 
