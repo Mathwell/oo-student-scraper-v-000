@@ -15,15 +15,13 @@ class Scraper
 
     students=Nokogiri::HTML(html)
     students.css(".student-card").each do |student_css|
-      #student=student_css().text
+
       @students<<{
         :name => student_css.css(".student-name").text,
         :location =>student_css.css(".student-location").text,
         :profile_url => student_css.css("a")[0]["href"]
       }
     end
-
-    #@students[0]={location:"", name:"",profile_url:""}
     @students
   end
 
