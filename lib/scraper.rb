@@ -32,7 +32,7 @@ class Scraper
 #method is responsible for scraping an individual student's profile page to get further information about that student.
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   def self.scrape_profile_page(profile_url)
-<<<<<<< HEAD
+
     html=File.read(profile_url)
     student=Nokogiri::HTML(html)
     student_css=student.css("div.main-wrapper.profile")
