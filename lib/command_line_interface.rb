@@ -9,7 +9,6 @@ class CommandLineInteface
   def run
     make_students
     add_attributes_to_students
-    puts Student.all[1].name
     display_students
   end
 
@@ -21,9 +20,6 @@ class CommandLineInteface
   def add_attributes_to_students
     Student.all.each do |student|
       attributes = Scraper.scrape_profile_page(BASE_PATH + student.profile_url)
-      puts "URL"
-      puts BASE_PATH + student.profile_url
-      puts attributes
       student.add_student_attributes(attributes)
     end
   end
