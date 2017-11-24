@@ -5,15 +5,9 @@ class Student
   @@all = []
 
   def initialize(student_hash)
-    #puts student_hash[:name]
     add_student_attributes(student_hash)
-    #puts self.name
-    #@name=student_hash[:name]
-    #@location=student_hash[:location]
     @@all<<self
-    #puts @@all.first.name
     self
-
   end
 
   def self.create_from_collection(students_array)
